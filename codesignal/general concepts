@@ -1,0 +1,37 @@
+1. Common Techniques
+"##########################################"
+- binary search - an efficient search algorithm for sorted arrays that divides the input in half on each pass;
+- two pointers  - a technique that uses two pointers to optimize naive solutions that involve using multiple loops;
+- prefix sums - a technique for quickly finding the sum of any contiguous slice of an array;
+
+(Interview Questions)
+
+- Binary Search
+Implementing binary search from scratch.
+Knowledge questions comparing binary search in an array to a binary search tree.
+Using a binary search to count the number of occurrences of a number in a sorted array.
+Using a binary search to count the number of occurrences larger than, or smaller than, a given number.
+Using the binary search strategy to locate inputs of a function without an explicit array, e.g. if f(x) is monotonically increasing that takes integer arguments, binary search can be used to solve invert f(x), or show there is no solution (if f(x) takes floats as an argument, binary search can generally only approximate a monotone function to a given tolorance).
+Doing multiple searches for an item in a large array.
+
+- Two Pointers
+Remove duplicates from a sorted array
+Reverse the characters in a string.
+Reversing a linked list in place.
+Detecting a cycle in a linked list.
+
+- Prefix Sums
+Line of sight problems (calculating whether one point is visible from another, given an array of heights);
+Find a cumulative distribution (for example, find what percentage of income the top 1% of earners make from an array of incomes);
+Calculate the moving average on an array.
+
+
+
+2. Dynamic Programming
+"##########################################"
+- bottom-up strategy (iteration) - In this strategy, you start solving from the smallest subproblem up towards the original problem. If you’re doing this, you’ll solve all of the subproblems, thereby solving the larger problem. The cache in bottom-up solutions is usually an array (either one or multi-dimensional).
+- top-down strategy (recursion) - Start solving the identified subproblems. If a subproblem hasn’t been solved yet, solve it and cache the answer; if it has been solved, return the cached answer. This is called memoization. The cache in top-down solutions is usually a hash table, binary search tree, or other dynamic data structure.
+
+(Interview Questions)
+
+- Knapsack problems, Scheduling problems, Compute the nth Fibonacci number
