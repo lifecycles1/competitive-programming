@@ -17,7 +17,6 @@
 
 #include <vector>
 #include <queue>
-using namespace std;
 
 class MedianFinder {
 public:
@@ -63,8 +62,8 @@ public:
   }
 
 private:
-  priority_queue<int> lower;
-  priority_queue<int, vector<int>, greater<int>> higher;
+  std::priority_queue<int> lower;
+  std::priority_queue<int, std::vector<int>, std::greater<int>> higher;
 };
 
 
