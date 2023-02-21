@@ -17,8 +17,6 @@ def solution(s):
     return '_'
 
 
-
-
 # JS solution
 
 # function solution(s) {
