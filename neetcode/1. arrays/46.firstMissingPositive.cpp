@@ -3,6 +3,7 @@
 // You must implement an algorithm that runs in O(n) time and uses constant extra space.
 
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class Solution {
@@ -25,3 +26,10 @@ public:
     return nums.size() + 1;
   }
 };
+
+
+int main() {
+  vector<int> nums = {-20, -100, 18, 25, 7, 1, -6, 2, 100, 75};
+  cout << Solution().firstMissingPositive(nums) << endl;
+  return 0;
+}

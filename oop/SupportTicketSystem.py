@@ -45,10 +45,10 @@ support_system.add_agent(Agent("Alice"))
 support_system.add_agent(Agent("Bob"))
 support_system.add_agent(Agent("Eve"))
 
-support_system.add_ticket(Ticket("Baba mi", "I need help with my chickens."))
-support_system.add_ticket(Ticket("Your mom", "I can't log in."))
-support_system.add_ticket(Ticket("Dqdka", "Hello, I need help with my account."))
-support_system.add_ticket(Ticket("4i4ka", "Hello, I need to get in"))
+support_system.add_ticket(Ticket("Grandma", "I need help with my chickens."))
+support_system.add_ticket(Ticket("Mom", "I can't log in."))
+support_system.add_ticket(Ticket("Grandpa", "Hello, I need help with my account."))
+support_system.add_ticket(Ticket("Dad", "Hello, I need to get in"))
 
 support_system.assign_tickets()
 
