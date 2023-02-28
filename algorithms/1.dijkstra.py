@@ -1,3 +1,5 @@
+# find the shortest path between two nodes in a graph
+
 # copilot solution
 # dictionary to represent the graph and a hash map to keep track of the shortest distances
 # computes the shortest distances and the shortest path from given start to given end node
