@@ -1,40 +1,23 @@
-
-# Either one of these methods can be used
-
-# Reverse the string and compare to the original
-
-# function isPalindrome(str) {
-#     return str === str.split('').reverse().join('');
-# }
+def isPalindrome(str):
+    return str == "".join(reversed(str))
 
 
-
-# Use a for loop to iterate over the string
-
-# function isPalindrome(str) {
-#     for (let i = 0; i < str.length / 2; i++) {
-#         if (str[i] !== str[str.length - i - 1]) {
-#             return false;
-#         }
-#     }
-#     return true;
-# }
+def isPalindrome(str):
+    return str == str[::-1]
 
 
+def isPalindrome(str):
+    for i in range(len(str)//2):
+        if str[i] != str[len(str) - i - 1]:
+            return False
+    return True
 
-# Using Recursion
-
-# function isPalindrome(str) {
-#     if (str.length === 0 || str.length === 1)
-#         return true;
-#     if (str[0] === str[str.length - 1])
-#         return isPalindrome(str.slice(1, str.length - 1));
-#     return false;
-# }
-
-
-
-
+def isPalindrome(str):
+    if len(str) == 0 or len(str) == 1:
+        return True
+    if str[0] == str[len(str) - 1]:
+        return isPalindrome(str[1:len(str)-1])
+    return False
 
 
 
