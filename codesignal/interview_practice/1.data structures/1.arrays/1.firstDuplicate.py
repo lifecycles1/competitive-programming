@@ -31,8 +31,6 @@ def solution(a):
 #     return -1
 
 
-
-
 # JS solution
 
 # solution = a => {

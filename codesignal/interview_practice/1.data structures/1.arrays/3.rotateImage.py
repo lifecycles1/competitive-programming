@@ -19,16 +19,3 @@ def solution(a):
         for j in range(i):
             a[i][j], a[j][i] = a[j][i], a[i][j]
     return a
-
-
-##############################################
-
-# JS solution
-
-# function solution(a) {
-#     state = a.map((_, rowIndex) => a.map((col) => col[rowIndex]));
-#     state.map((e) => {
-#         e.reverse()
-#     })
-#     return state
-# }
