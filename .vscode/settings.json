@@ -67,7 +67,8 @@
     "functional": "cpp",
     "iomanip": "cpp",
     "ranges": "cpp",
-    "span": "cpp"
+    "span": "cpp",
+    "optional": "cpp"
   },
   "C_Cpp.errorSquiggles": "enabled"
 }

@@ -61,3 +61,24 @@ class Solution:
             n = n*10 + int(s[i])
             i += 1
         return n
+
+
+class Solution:
+  def solution(self, s1, s2):
+      import re
+      m1 = re.findall(r'([a-z]+|[0-9]+)',s1)
+      m2 = re.findall(r'([a-z]+|[0-9]+)',s2)
+      l1 = [self.tryparse(x) for x in m1]
+      l2 = [self.tryparse(x) for x in m2]
+      c1 = [len(x) for x in m1]
+      c2 = [len(x) for x in m2]
+      if l1 < l2:
+          return True
+      if l1 == l2:
+          return c1>c2
+      return False
+
+  def tryparse(self, x):
+      if x.isdigit():
+          return x.zfill(20)
+      return x
