@@ -1,20 +1,21 @@
 
 #include <iostream>
 #include <vector>
+using namespace std;
 
 class Solution {
 public:
-  std::vector<int> mergeSort(std::vector<int> a) {
+  vector<int> mergeSort(vector<int> a) {
     if (a.size() == 1) return a;
     int mid = a.size() / 2;
-    std::vector<int> left(a.begin(), a.begin() + mid);
-    std::vector<int> right(a.begin() + mid, a.end());
+    vector<int> left(a.begin(), a.begin() + mid);
+    vector<int> right(a.begin() + mid, a.end());
     left = mergeSort(left);
     right = mergeSort(right);
     return merge(left, right);
   }
-  std::vector<int> merge(std::vector<int> left, std::vector<int> right) {
-    std::vector<int> result;
+  vector<int> merge(vector<int> left, vector<int> right) {
+    vector<int> result;
     while (left.size() > 0 || right.size() > 0) {
       if (left.size() > 0 && right.size() > 0) {
         if (left.front() <= right.front()) {
@@ -36,13 +37,48 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  std::vector<int> a = {1, 3, 5, 7, 2, 4, 6, 8};
-  std::vector<int> b = s.mergeSort(a);
-  for (int i = 0; i < b.size(); i++) {
-    std::cout << b[i] << " ";
+// quicker solution
+class Solution {
+public:
+  vector<int> sortArray(vector<int>& nums) {
+    mergeSort(nums, 0, nums.size() - 1);
+    return nums;
   }
-  std::cout << std::endl;
-  return 0;
-}
+private:
+  void merge(vector<int>& arr, int L, int M, int R) {
+    vector<int> left(arr.begin() + L, arr.begin() + M + 1);
+    vector<int> right(arr.begin() + M + 1, arr.begin() + R + 1);
+    int i = L;
+    int j = 0;
+    int k = 0;
+    while (j < left.size() && k < right.size()) {
+      if (left[j] <= right[k]) {
+        arr[i] = left[j];
+        j++;
+      } else {
+        arr[i] = right[k];
+        k++;
+      }
+      i++;
+    }
+    while (j < left.size()) {
+      arr[i] = left[j];
+      j++;
+      i++;
+    }
+    while (k < right.size()) {
+      arr[i] = right[k];
+      k++;
+      i++;
+    }
+  }
+
+  void mergeSort(vector<int>& arr, int l, int r) {
+    if (l < r) {
+      int m = l + (r - l) / 2;
+      mergeSort(arr, l, m);
+      mergeSort(arr, m + 1, r);
+      merge(arr, l, m, r);
+    }
+  }
+};
